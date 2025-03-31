@@ -8,6 +8,25 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  // useEffect(() => {
+  //   localStorage.removeItem('currentUser'); // Clears stored user data on restart
+  //   setIsAuthenticated(false);
+  //   setCurrentUser(null);
+  //   setIsLoading(false);
+  // }, []);
+  
+  useEffect(() => {
+    window.addEventListener('beforeunload', () => {
+      localStorage.removeItem('currentUser');
+    });
+    return () => {
+      window.removeEventListener('beforeunload', () => {
+        localStorage.removeItem('currentUser');
+      });
+    };
+  }, []);
+  
+
   useEffect(() => {
     const storedUser = localStorage.getItem('currentUser');
     if (storedUser) {
