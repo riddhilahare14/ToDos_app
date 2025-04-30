@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
-import Tasks from './screens/tasks'
+import Tasks from './screens/Tasks'
 import LoginSignup from './screens/LoginSignup'
 
 const App = () => {
