@@ -47,6 +47,6 @@ export const deleteTask = async (id) => {
             Authorization: `Bearer ${token}`
         }
     };
-    await axios.delete(`${API_URL}/${id}`);
+    await axios.delete(`${API_URL}/${id}`, config);
 };
 

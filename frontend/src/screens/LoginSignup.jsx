@@ -3,7 +3,7 @@ import { signupUser, loginUser } from '../services/auth_api.js';
 
 const LoginSignup = ({ setIsAuthenticated, setCurrentUser }) => {
 
-  const [hasAccount, setHasAccount] = useState(false);
+  const [hasAccount, setHasAccount] = useState(true);
   const [hSentence, setHSentence] = useState("Login");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
