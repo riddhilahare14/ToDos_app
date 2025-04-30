@@ -1,6 +1,6 @@
 import axios from "axios";
-
-const API_URL = "http://localhost:4000/tasks";
+import BASE_URL from "./config";
+const API_URL = `${BASE_URL}/tasks`;
 
 export const fetchTasks = async () => {
     const user = JSON.parse(localStorage.getItem('currentUser'));

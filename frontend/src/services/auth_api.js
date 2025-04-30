@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "http://localhost:4000/auth";
+import BASE_URL from "./config";
+const API_URL = `${BASE_URL}/auth`;
 
 export const signupUser = async (username, email, password) => {
     if (username.trim() === "" || email.trim() === "" || password.trim() === "") {
